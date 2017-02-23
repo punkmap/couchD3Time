@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>couchD3Time</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery library -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/material-design-lite/material.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/material-datetime-picker.css">
+    <script src="./js/leaflet-material.min.js"></script>
+    <link href='./css/leaflet-material.min.css' rel='stylesheet' />
+    <script src="https://unpkg.com/babel-polyfill@6.2.0/dist/polyfill.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+    <script src="js/material-datetime-picker.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- Colored FAB button -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="height: 100%; width:100%">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title --><span class="mdl-layout-title">couchD3Time</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <button id="date-blockgroups" type="button" class="mdl-button">Block Groups</button>
+<!--                    <button id="date-dialog" type="button" class="mdl-button">Show Dialog</button>-->
+                    <button id="query-dialog" type="button" class="mdl-button">Query</button>
+                    <button id="time-button" type="button" class="mdl-button">Time</button>
+<!--                    <button id="chart-button" type="button" class="mdl-button">charts</button> <a class="mdl-navigation__link" href="">Link</a> <a class="mdl-navigation__link" href="">Link</a> <a class="mdl-navigation__link" href="">Link</a>--> 
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer"> <span class="mdl-layout-title">Title</span>
+            <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="">Link</a> <a class="mdl-navigation__link" href="">Link</a> <a class="mdl-navigation__link" href="">Link</a> <a class="mdl-navigation__link" href="">Link</a> </nav>
+        </div>
+        <main class="mdl-layout__content" style="height: 100%; width:100%">
+            <div class="page-content" style="height: 100%; width:100%">
+                <div id="upperGrid" class="mdl-grid my-grid" style="height: 100%; width:100%">
+                    <div id="mapGrid" class="mdl-cell my-cell" style="height: 100%; width:100%">
+<!--
+                        <div id="mapCell" class="mdl-cell" style="height: 100%; width:100%">
+                            <div id="map"></div>
+                        </div>
+-->
+                        <div id="map"></div>    
+                    </div>
+                    <div id="chartGrid" class="mdl-cell my-cell" style="width:0%; height 100%">
+                        <span id="chartMetricLabel" class="mdl-layout-title" style="padding: 1em">MetricName</span>
+                        <div id='chart'></div>
+                    </div>
+                </div>
+                <div id="timeGrid" class="mdl-grid" style="height: 0%; width:100%">
+                    <!--                    <div id="timeCell" class="mdl-cell mdl-cell--12-col" style="height: 100%; width:100%">-->
+                    <!--
+                            <div class='mdl-grid' style='height:10%'>
+                                <div class='mdl-cell mdl-cell--12-col' id='sliderCell' style='height:20%'>
+    -->
+                    <div id='sliderControls'>
+                        <div id='playDiv'>
+                            <button name='play' id='play' class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-color--cyan'> <i class='material-icons'>play_arrow</i> </button>
+                        </div>
+                        <div id='sliderContainer'> </div>
+                    </div>
+                    <!--
+                                </div>
+                            </div>
+    -->
+                    <!--                        </div>-->
+                </div>
+                
+            </div>
+        </main>
+    </div>
+    <dialog id="dialog-timequery" class="mdl-dialog">
+        <h4 class="mdl-dialog__title">eventualQueries</h4>
+        <div class="mdl-dialog__content">
+            <p> in the times of yore there were queries. THere will be queries once agoin... here </p>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" class="mdl-button close">Query</button>
+        </div>
+    </dialog>
+</body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="./node_modules/underscore/underscore-min.js"></script>
+<script src="./data/durhambg.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

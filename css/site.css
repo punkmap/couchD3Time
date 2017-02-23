@@ -1,0 +1,218 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+}
+
+.my-grid .my-cell {
+    padding: 0px;
+    margin: 0px;
+}
+#upperGrid{
+    padding: 0px;
+}
+
+#chartGrid {
+    height: 100%;
+    padding: 0px;
+}
+#chart {
+    height: 100%;
+    /* NEW */
+    position: relative;
+    width: 100%;
+}
+#timeGrid {
+    background-color: yellow;
+    float: left;
+}
+
+#sliderContainer {
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#sliderControls {
+    width: 100%;
+}
+
+#slider {
+    width: 100%;
+}
+
+#playDiv {
+    padding-left: 10px;
+}
+
+#sliderControls {
+    background-color: #99ccff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.axis {
+    fill: gray;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.axis .halo {
+    stroke: gray;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.slider .handle path {
+    stroke: white;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+.slider .handle text {
+    fill: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/*
+#slider {
+    width: 80%
+}*/
+
+
+/*!!!!!modal css start*/
+
+.mdl-dialog {
+    border: none;
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+    width: 280px;
+}
+
+.mdl-dialog__title {
+    padding: 24px 24px 0;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.mdl-dialog__actions {
+    padding: 8px 8px 8px 24px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.mdl-dialog__actions > * {
+    margin-right: 8px;
+    height: 36px;
+}
+
+.mdl-dialog__actions > *:first-child {
+    margin-right: 0;
+}
+
+.mdl-dialog__actions--full-width {
+    padding: 0 0 8px 0;
+}
+
+.mdl-dialog__actions--full-width > * {
+    height: 48px;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    padding-right: 16px;
+    margin-right: 0;
+    text-align: right;
+}
+
+.mdl-dialog__content {
+    padding: 20px 24px 24px 24px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+
+/*!!!!!modal css stop*/
+
+
+/*!!!!!datetime picker css start*/
+
+.c-datepicker {
+    z-index: 100;
+}
+
+.c-datepicker__header-date__day {
+    padding: 15px;
+}
+/*
+.c-datepicker__header-date{
+    display: none;
+}
+*/
+
+.c-btn {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+    line-height: 36px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    min-width: 88px;
+    height: 36px;
+    margin: 10px 8px;
+    padding: 0 8px;
+    text-align: center;
+    letter-spacing: .5px;
+    border-radius: 2px;
+    background: #F1F1F1;
+    color: #393939;
+    transition: background 200ms ease-in-out;
+    box-shadow: 0 3.08696px 5.82609px 0 rgba(0, 0, 0, 0.16174), 0 3.65217px 12.91304px 0 rgba(0, 0, 0, 0.12435);
+}
+
+.c-btn--flat {
+    background: transparent;
+    margin: 10px 8px;
+    min-width: 52px;
+}
+
+.c-btn:hover {
+    background: rgba(153, 153, 153, 0.2);
+    color: #393939;
+}
+
+.c-btn:active {
+    box-shadow: 0 9.6087px 10.78261px 0 rgba(0, 0, 0, 0.17217), 0 13.56522px 30.3913px 0 rgba(0, 0, 0, 0.15043);
+}
+
+.c-btn--flat,
+.c-btn--flat:hover,
+.c-btn--flat:active {
+    box-shadow: none;
+}
+
+
+/*!!!!!datetime picker css stop*/

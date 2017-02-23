@@ -1,0 +1,21 @@
+{
+  "name": "couchtime",
+  "version": "1.0.0",
+  "description": "couchdb geography application",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "couchdb",
+    "d3",
+    "leaflet"
+  ],
+  "author": "tyler waring",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "material-design-lite": "^1.3.0",
+    "underscore": "^1.8.3"
+  }
+}
